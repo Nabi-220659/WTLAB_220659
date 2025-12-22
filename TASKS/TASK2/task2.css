@@ -1,0 +1,33 @@
+        table{
+            /* border: 1px solid white;*/
+            border-collapse:collapse;
+            background-color: white; 
+            width:500px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 10px white;
+            border-radius: 20px;  
+            overflow: hidden; 
+        }
+         td,th{
+            border: 1px solid black;
+            border-collapse:collapse;
+            padding: 8px;
+            border-bottom: 1px solid black;
+            border-left:none;
+            text-align: center;
+            border-right: none; 
+        }
+         tr:first-child{
+            background-color: aqua;
+            color:white;
+            font-weight: bold;
+        }
+         tr:first-child td{
+            background-color: aqua;
+            color:white;
+            font-weight: bold;
+            border-top: none;
+        }
+         tr:last-child td{
+           border-bottom: none ;
+        }
