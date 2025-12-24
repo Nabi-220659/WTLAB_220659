@@ -22,7 +22,6 @@
             color: white;
             margin: 0;
         }
-
         nav a {
             color: cyan;
             margin: 0 10px;
@@ -33,10 +32,24 @@
             color: white;
         }
         .intro{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
             font-family:'Times New Roman', Times, serif;
             text-align: center;
+            width:100%;
+            height:300px;
+        }
+        .intro marquee{
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
         }
         .intro1{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-bottom: 100px;
             font-family:'Times New Roman', Times, serif;
             text-align: center;
         }
@@ -44,31 +57,39 @@
             text-align:center;
             background-color: black;
             padding: 15px 0px;
+            border-radius: 30px;
+            box-shadow:2px 2px 10px white ;
         }
-        #SOURCECODE{
+        .foot{
+            display: flex;
+            flex-direction: column;
+        }
+        #forms{
             padding: 10px 20px;
             display: flex;
             justify-content: center;
         }
-        #SOURCECODE input{
-            border-radius: 10px;
-            width: auto;
+        #forms input{
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 30px;
+            margin-top: 5px;
         }
         form {
-            background-color: white;
-            color: black;
-            padding: 40px 20px;
+            background-color:black;
+            color: white;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 30px 20px;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width:400px;
+            box-shadow: 5px 5px 10px white;
             }
         label{
             text-decoration: solid;
-        }
-        video{
-            display: block;
-            margin:auto;
-            width:800px;
-            height:400px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
         }
         .navigation{
             display:flex;
@@ -82,23 +103,37 @@
         .navigation a{
             color:black;
         }
-        .frames{
+        #ABOUTUS{
             display: flex;
-            justify-content: space-between;
-            /*flex-direction: column;*/
+            flex:1;
+            gap:20px;
         }
-        iframe{
-            background-color: black;
-            display: block;
-            margin:auto;
-            width:1000px;
-            height:500px;
-            margin:20px;
+        #ABOUTUS pre{
+            margin-top: 40px;
         }
-        audio{
-            display: block;
-            margin:auto;
-            width:30%;
+        #ABOUTUS img:hover{
+            animation:fade 2s ;  /*steps(6)*/
+        }
+        @keyframes fade{
+            from{opacity:0;}
+            to{opacity: 1;}
+        }
+       /*#CONTACTUS{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        }
+        #SOURCECODE{
+        grid-column: 2;        
+        grid-row: 1 / span 2;  
+        } */
+        #CONTACTUS{
+            display:flex;
+            gap:100px;
+            flex:1;
+        }
+        .con h2{
+            margin-top:150px;
         }
     </style>
 </head>
@@ -119,7 +154,9 @@
     <div class="navigation">
         <a href="#HOME">HOME</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html">HTML</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">CSS</a>
+            <a href="/TASKS/TASK2/FRAMES.html" target="_blank">FRAMES</a>
+            <a href="/TASKS/TASK2/task2.html" target="_blank">TABLE</a>
+            <a href="/TASKS/TASK2/FORMS.html" target="_blank">FORMS</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">PYTHON</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">RUBY</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">C</a>
@@ -129,8 +166,6 @@
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
-            <a href="/TASKS/TASK2/task2.html" target="_blank">TABLE</a>
-            <a href="/TASKS/TASK2/FORMS.html" target="_blank">FORMS</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
@@ -145,6 +180,8 @@
     <pre>
         1.HTML      2.CSS       3.JQUERY        4.SCSS      5.JAVASCRIPT        6.PHP       7.ANGULAR4/5/6
     </pre>
+    </div>
+    <div class="matter">
     <table>
     <tr>
     <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4riWxpWiRkulxTpR4IGqRHrrC2MwCKLbB8A&s" alt="Looks Like browser does not supprt" height="150" width="200"></td>
@@ -172,36 +209,7 @@
     </tr>
     </table>
 </div>
-<div id="SOURCECODE">
-    <form>
-        <div>
-        <label>SEARCH COURSE:</label>
-        <input type="search" placeholder="Which course are you interested"></div>
-        <div>
-        <label>NAME:</label>
-        <input type="text" placeholder="Enter your name"></div>
-        <div>
-        <label>EMAIL:</label>
-        <input type="email" placeholder="Enter email">
-        <div>
-        <input type="submit" value="submit"></div>
-        </div>
-    </form>
-</div>
-     <div id="TECHARTICLE">
-        <h2 style="text-align:center">PROGRAMS FOR WEB DEVELOPMENT</h2>
-        <video controls muted width="400" height="200" poster="/PICTURES/1748617268040.jpg">
-            <source src="PICTURES/video1.mp4" type="video/mp4">
-        </video>
-        <audio controls muted>
-            <source src="/PICTURES/Charlie Bgm.mp3">
-        </audio>
-        <div class="frames">
-        <iframe src="https://www.thapatechnical.com/2024/02/best-html-complete-course-by-thapa.html"
-        loading="lazy" allowfullscreen title="WEBSITE FOR WEB DEVELOPMENT">
-        </iframe>
-        <iframe src="/PICTURES/General_Aptitude_GATE-O-PEDIA_General_Aptitude_65fd9eb4a759cc00180b1f15.pdf"></iframe>
-        </div>
+     <div>
         <pre>
 HTML (HyperText Markup Language) is the foundational language of web development and is used to create the structure of web pages.
 It defines elements such as headings, paragraphs, images, links, forms, tables, and multimedia content. HTML5 introduced semantic
@@ -222,21 +230,18 @@ Python is widely used in back-end web development due to its simplicity and read
 and Flask to build secure, scalable, and maintainable web applications. Python handles server-side logic, database operations, user authentication,
 and API development. Its extensive libraries and strong community support make it a popular choice for web development and data-driven applications.
 
-PHP is a server-side scripting language designed specifically for web development. It is used to create dynamic web pages and interact with databases such as MySQL.
-PHP powers many popular content management systems like WordPress, Joomla, and Drupal. It is easy to integrate with HTML and is widely supported by web hosting providers,
-making it a practical choice for many web applications.
+PHP is a server-side scripting language designed specifically for web development. It is used to create dynamic web pages and interact with databases
+such as MySQL.PHP powers many popular content management systems like WordPress, Joomla, and Drupal. It is easy to integrate with HTML and is widely
+supported by web hosting providers,making it a practical choice for many web applications.
 
 Java is a robust and platform-independent programming language used in large-scale and enterprise-level web applications. It is commonly used
 with frameworks such as Spring and Hibernate to develop secure and high-performance server-side systems. Java provides strong memory management,
 multithreading, and security features, making it suitable for complex and mission-critical web applications.
 </pre>
     </div>
-    <div id="ABOUTUS">
-        <table>
-            <tr>
-            <td><img src="/PICTURES/1748617268040.jpg" height="300" width="100%" alt="MY PHOTO"></td>
-            <td>
-            <pre>
+<div id="ABOUTUS">
+    <div><img src="/PICTURES/1748617268040.jpg" height="300" width="100%" alt="MY PHOTO"></div>
+    <div><pre>
 •Absolutely! Here’ “About Myself”:
 •Name:   Mohammad Nabi
 •Age:   19 years old
@@ -245,17 +250,40 @@ multithreading, and security features, making it suitable for complex and missio
 •Interests:   Web development, learning new technologies
 •Achievements/Activities:   Successfully completed the National Cadet Corps (NCC) program
 •Personal Traits:   Enthusiastic about developing skills and growing both personally and professionally
-            </pre>
-            </td>
-            </tr>
-        </table>
-    </div>
-    <div id="CONTACTUS">
-        <p>Contact us:<br> Mobile Number:9848397393</p>
-    </div>
-    <footer>
-        <p>&copy 2025 | ALL RIGHTS ARE RESERVED</p>
-    </footer>
-
+            </pre></div>
+</div>
+<div id="CONTACTUS">
+<div class="con">
+<h2 style="font-family:'Times New Roman', Times, serif; text-decoration: underline;">Feel Free To Contact</h2>
+<p style="font-family: 'Times New Roman', Times, serif; font-weight: 400; padding:10px 0px;">
+Hello Everyone! Have a great day :) I am here to help you.<br>
+If you want to know something or you have any suggestion then please mail me.<br>
+Thank You.<br>
+<img src="/PICTURES/instagram.png" style="width:30px; height:20px;"><a href="https://www.instagram.com/mohammadnabi943?igsh=MXY2cnFoODFiazZl">&nbsp;&nbsp;@MOHAMMADNABI943</a><br>
+<img src="/PICTURES/facebook.png" style="width:30px; height:20px;"><a href="https://www.facebook.com/share/1EdYkFDrfy/">&nbsp;&nbsp;MOHAMMAD NABI</a>
+</p>
+</div>
+        <div id="forms">
+        <form>
+        <div >
+        <label>NAME:</label>
+        <input type="text" placeholder="ENTER YOUR NAME"></div>
+        <div >
+        <label>EMAIL:</label>
+        <input type="email" placeholder="Enter email"></div>
+        <div >
+        <label>MESSAGE:</label>
+        <input type="textarea" placeholder="Enter MSG"></div>
+        <div >
+        <input type="submit" value="SUBMIT" style="width:100%; background-color:white; border-radius: 10px; color:black; "></div>
+        </div>
+        </form>
+        </div>
+</div>
+<div class="foot">
+<footer>
+<p>&copy 2025 | ALL RIGHTS ARE RESERVED</p>
+</footer>
+</div>
 </body>
 </html>

@@ -16,7 +16,6 @@
             font-weight:500;
         }
         .task2 table{
-            /* border: 1px solid white;*/
             border-collapse:collapse;
             background-color: white; 
             width:500px;
@@ -24,10 +23,18 @@
             box-shadow: 3px 3px 10px white;
             border-radius: 20px;  
             overflow: hidden; 
+            animation: slide 4s;
+        }
+        @keyframes slide{
+            from{
+                transform: translateX(-100px);
+            }
+            to{
+                transform: translateX(0px);
+            }
         }
         .task2 td,th{
             border: 1px solid black;
-            border-collapse:collapse;
             padding: 8px;
             border-bottom: 1px solid black;
             border-left:none;
@@ -40,9 +47,6 @@
             font-weight: bold;
         }
         .task2 tr:first-child td{
-            background-color: aqua;
-            color:white;
-            font-weight: bold;
             border-top: none;
         }
         .task2 tr:last-child td{
@@ -50,34 +54,38 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="task2">
-        <table>
-            <tr>
-                <td>S.No</td>
-                <td>Course</td>
-                <td>Price</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>HTML</td>
-                <td>₹500</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>CSS</td>
-                <td>₹600</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>JavaScript</td>
-                <td>₹800</td>
-            </tr>
-        </table>
-    </div>
-<div class="table2" style="display: flex;
-justify-content: center;">
-        <table style="border:1px solid black;
+
+<!-- TABLE 1 : Frontend Courses -->
+<div class="task2">
+    <table>
+        <tr>
+            <td>S.No</td>
+            <td>Course</td>
+            <td>Price</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>HTML & CSS Bootcamp</td>
+            <td>₹999</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>JavaScript Essentials</td>
+            <td>₹1499</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>React Basics</td>
+            <td>₹1999</td>
+        </tr>
+    </table>
+</div>
+
+<!-- TABLE 2 : Programming Languages -->
+<div class="table2" style="display: flex; justify-content: center;">
+    <table style="border:1px solid black;
         background-color:white;
         align-items: center;
         width:500px;
@@ -87,51 +95,53 @@ justify-content: center;">
         overflow: hidden;
         border-collapse: collapse;
         text-align: center;">
-            <tr style="background-color: aqua;">
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">S.No</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Course</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Price</td>
-            </tr>
-            <tr>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">1</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">HTML</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹500</td>
-            </tr>
-            <tr>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">2</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">CSS</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹600</td>
-            </tr>
-            <tr>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">3</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">JavaScript</td>
-                <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹800</td>
-            </tr>
-        </table>
-        </div>
-        <table>
-            <tr>
-                <td>S.No</td>
-                <td>Course</td>
-                <td>Price</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>HTML</td>
-                <td>₹500</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>CSS</td>
-                <td>₹600</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>JavaScript</td>
-                <td>₹800</td>
-            </tr>
-        </table>
-    
-    
+        
+        <tr style="background-color: aqua;">
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">S.No</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Language</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Fee</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">1</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Python</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹1200</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">2</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">Java</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹1500</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">3</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">C++</td>
+            <td style="border:1px solid; border-left: none; border-right: none;padding:10px;">₹1300</td>
+        </tr>
+    </table>
+</div>
+
+<!-- TABLE 3 : Career Tracks -->
+<table>
+    <tr>
+        <td>S.No</td>
+        <td>Career Track</td>
+        <td>Cost</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Full Stack Developer</td>
+        <td>₹4999</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Data Science</td>
+        <td>₹5999</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Cloud Computing</td>
+        <td>₹5499</td>
+    </tr>
+</table>
+
 </body>
 </html>

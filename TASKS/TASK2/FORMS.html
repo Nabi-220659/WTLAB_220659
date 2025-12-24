@@ -17,6 +17,11 @@
                 margin-bottom:50px;
                 padding: 20px 20px;
                 border-radius: 10px;
+                animation: fade 2s steps(5);
+            }
+            @keyframes fade{
+                from{opacity: 0;}
+                to{opacity: 1;}
             }
             label{
                 font-family: 'Times New Roman', Times, serif;
@@ -60,6 +65,7 @@
                 box-shadow: 4px 4px 15px black;
                 padding: 20px 20px;
                 border-radius: 10px;
+                animation: fade 2s steps(5);
             }
             .contact-row{
                 display: flex;
@@ -72,6 +78,7 @@
             .contact-row input{
                 width:100%;
             }
+
         </style>
     </head>
 <body>
@@ -129,7 +136,7 @@
     </div>
 </div>
 
-    <div style="text-align: center;
+    <div class="submit" style="text-align: center;
     margin-bottom: 10px;
     ">
     <input type="submit" value="SUBMIT" style="background-color:black;

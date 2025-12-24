@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FRAMES AND VIDEOS</title>
+        <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+        h2{
+            text-align: center;
+        }
+        iframe{
+            background-color: black;
+            width: 50%;
+            height: 500px;
+            margin:20px;
+            box-shadow: 4px 4px 20px rgb(245, 243, 243);
+            animation:slide 2s;
+        }
+        @keyframes slide{
+            from{
+                transform: translateX(-100px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        .frames{
+            display: flex;
+            justify-content: space-between;
+            /*flex-direction: column;*/
+        }
+        audio{
+            display: block;
+            margin:auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width:30%;
+        }
+        video{
+            display: block;
+            margin:auto;
+            width:800px;
+            height:400px;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="TECHARTICLE">
+        <h2 style="text-align:center">PROGRAMS FOR WEB DEVELOPMENT</h2>
+        <video controls muted width="400" height="200" poster="/PICTURES/1748617268040.jpg">
+            <source src="/PICTURES/video1.mp4" type="video/mp4">
+        </video>
+        <audio controls muted>
+            <source src="/PICTURES/Charlie Bgm.mp3">
+        </audio>
+        <div class="frames">
+        <iframe src="https://www.thapatechnical.com/2024/02/best-html-complete-course-by-thapa.html"
+        loading="lazy" allowfullscreen title="WEBSITE FOR WEB DEVELOPMENT">
+        </iframe>
+        <iframe src="/PICTURES/General_Aptitude_GATE-O-PEDIA_General_Aptitude_65fd9eb4a759cc00180b1f15.pdf"></iframe>
+        </div>
+    </body>
+</html>
