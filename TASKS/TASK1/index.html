@@ -13,7 +13,7 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content:space-between;
             align-items: center; 
             padding: 10px 20px;
         }
@@ -38,7 +38,7 @@
             font-family:'Times New Roman', Times, serif;
             text-align: center;
             width:100%;
-            height:300px;
+            height:250px;
         }
         .intro marquee{
             display: flex;
@@ -49,8 +49,8 @@
             display: flex;
             flex-direction: column;
             margin: auto;
-            margin-bottom: 100px;
-            font-family:'Times New Roman', Times, serif;
+            margin-bottom: 80px;
+            font-family:'Times New Roman', Times, serif; 
             text-align: center;
         }
         footer{
@@ -91,6 +91,19 @@
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
         }
+        .matter td{
+            padding:10px 10px;
+        }
+        .matter img{
+            border-radius: 8px;
+        }
+        .matter p{
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size:18px;
+        }
         .navigation{
             display:flex;
             justify-content: flex-start;
@@ -105,11 +118,16 @@
         }
         #ABOUTUS{
             display: flex;
-            flex:1;
+            /* flex:1; */
             gap:20px;
+            line-height: 1.5;
         }
         #ABOUTUS pre{
             margin-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #ABOUTUS img{
+            border-radius: 5px;
         }
         #ABOUTUS img:hover{
             animation:fade 2s ;  /*steps(6)*/
@@ -135,6 +153,24 @@
         .con h2{
             margin-top:150px;
         }
+        .information {
+            background-color: black;
+            border-left: 5px solid orangered;
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin: 30px;
+            box-shadow: -5px 5px 10px white;
+            line-height: 1.8;  
+        }
+
+        .information pre {
+            margin: 30px;                      /* remove default spacing */
+            font-family:'Times New Roman', Times, serif;             /* inherit modern font instead of monospace */
+            color: white;   
+            word-wrap: break-word;
+            white-space: pre-wrap;            
+        }
+
     </style>
 </head>
 
@@ -152,7 +188,7 @@
         </nav>
     </header>
     <div class="navigation">
-        <a href="#HOME">HOME</a>
+            <a href="#HOME">HOME</a>
             <a href="/WEB_DESIGN_TRAIL1/index.html">HTML</a>
             <a href="/TASKS/TASK2/FRAMES.html" target="_blank">FRAMES</a>
             <a href="/TASKS/TASK2/task2.html" target="_blank">TABLE</a>
@@ -209,7 +245,7 @@
     </tr>
     </table>
 </div>
-     <div>
+     <div class="information">
         <pre>
 HTML (HyperText Markup Language) is the foundational language of web development and is used to create the structure of web pages.
 It defines elements such as headings, paragraphs, images, links, forms, tables, and multimedia content. HTML5 introduced semantic
@@ -285,5 +321,6 @@ Thank You.<br>
 <p>&copy 2025 | ALL RIGHTS ARE RESERVED</p>
 </footer>
 </div>
+<script src="/TASKS/TASK3/script.js"></script>
 </body>
 </html>
