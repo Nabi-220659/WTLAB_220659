@@ -17,7 +17,7 @@ echo "<h3>File Content using fread():</h3>";
 echo nl2br($content);//nl2br prints the content with including line breaks instead of in a single line
 echo "<h3>File Content using file_get_contents():</h3>";
 echo nl2br(file_get_contents($file)); // file_get_contents() :- it is shortcut for fopen & fread()
-file_put_contents($file, "\nNew Line Added using file_put_contents()", FILE_APPEND);
+file_put_contents($file, "\nNew Line Added using file_put_contents()");
 echo "<h3>Reading file line-by-line using file():</h3>";
 $lines = file($file);//file() it stores data as an array
 foreach ($lines as $line) {

@@ -1,0 +1,407 @@
+<!-- Great 👍 — here are **bigger PHP exam-type problems (8–10 marks)** with **complete code + sample output** based exactly on your syllabus (forms, sessions, files, JSON, GET/POST, control structures, include, etc.).
+
+---
+
+# 🧪 Big PHP Problems with Code & Output
+
+---
+
+# 1️⃣ Student Registration Form (POST + Validation + Display)
+
+### Problem
+
+Create a student registration form with fields: name, email, age, course.
+Validate:
+
+* All fields required
+* Age ≥ 18
+  Display submitted data.
+
+---
+
+### Code
+
+```php
+<form method="post">
+Name: <input type="text" name="name"><br>
+Email: <input type="email" name="email"><br>
+Age: <input type="number" name="age"><br>
+Course: <input type="text" name="course"><br>
+<input type="submit" value="Register">
+</form>
+
+<?php
+if ($_POST) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $course = $_POST['course'];
+
+    if ($name=="" || $email=="" || $age=="" || $course=="") {
+        echo "All fields required";
+    }
+    elseif ($age < 18) {
+        echo "Age must be 18+";
+    }
+    else {
+        echo "<h3>Student Details</h3>";
+        echo "Name: $name <br>";
+        echo "Email: $email <br>";
+        echo "Age: $age <br>";
+        echo "Course: $course";
+    }
+}
+?>
+```
+
+---
+
+### Example Input
+
+```
+Ali
+ali@mail.com
+20
+BTech
+```
+
+### Output
+
+```
+Student Details
+Name: Ali
+Email: ali@mail.com
+Age: 20
+Course: BTech
+```
+
+---
+
+# 2️⃣ Login System using Session
+
+### Problem
+
+Create login form.
+If username=admin and password=1234 → login success.
+Store username in session and show welcome page.
+
+---
+
+### Code
+
+```php
+<?php
+session_start();
+
+if(isset($_POST['login'])) {
+    $u = $_POST['user'];
+    $p = $_POST['pass'];
+
+    if ($u=="admin" && $p=="1234") {
+        $_SESSION['user']=$u;
+    }
+    else {
+        echo "Invalid login";
+    }
+}
+?>
+
+<form method="post">
+Username: <input name="user"><br>
+Password: <input type="password" name="pass"><br>
+<input type="submit" name="login" value="Login">
+</form>
+
+<?php
+if(isset($_SESSION['user'])) {
+    echo "<h3>Welcome ".$_SESSION['user']."</h3>";
+}
+?>
+```
+
+---
+
+### Input
+
+```
+admin
+1234
+```
+
+### Output
+
+```
+Welcome admin
+```
+
+---
+
+# 3️⃣ File Upload + Display File Info
+
+### Problem
+
+Upload a file and display:
+
+* File name
+* File size
+* File type
+
+---
+
+### Code
+
+```php
+<form method="post" enctype="multipart/form-data">
+Select File: <input type="file" name="f"><br>
+<input type="submit" value="Upload">
+</form>
+
+<?php
+if(isset($_FILES['f'])) {
+
+    $name = $_FILES['f']['name'];
+    $size = $_FILES['f']['size'];
+    $type = $_FILES['f']['type'];
+
+    move_uploaded_file($_FILES['f']['tmp_name'], "uploads/".$name);
+
+    echo "File uploaded<br>";
+    echo "Name: $name <br>";
+    echo "Size: $size bytes<br>";
+    echo "Type: $type";
+}
+?>
+```
+
+---
+
+### Output Example
+
+```
+File uploaded
+Name: photo.jpg
+Size: 24567 bytes
+Type: image/jpeg
+```
+
+---
+
+# 4️⃣ Directory File Listing System
+
+### Problem
+
+Display all files in `uploads` folder in list format.
+
+---
+
+### Code
+
+```php
+<?php
+$path = "uploads";
+
+if(is_dir($path)) {
+    $files = scandir($path);
+
+    echo "<h3>Files:</h3>";
+
+    foreach($files as $f) {
+        if($f!="." && $f!="..")
+            echo $f."<br>";
+    }
+}
+?>
+```
+
+---
+
+### Output Example
+
+```
+Files:
+photo.jpg
+doc.pdf
+test.txt
+```
+
+---
+
+# 5️⃣ JSON Student Database Viewer
+
+### Problem
+
+Store students in PHP array → convert to JSON → decode → display in table.
+
+---
+
+### Code
+
+```php
+<?php
+$students = [
+ ["name"=>"Ali","age"=>20,"course"=>"BTech"],
+ ["name"=>"Sara","age"=>21,"course"=>"BSc"],
+ ["name"=>"John","age"=>22,"course"=>"BCA"]
+];
+
+$json = json_encode($students);
+
+$data = json_decode($json, true);
+
+echo "<table border=1>";
+echo "<tr><th>Name</th><th>Age</th><th>Course</th></tr>";
+
+foreach($data as $s) {
+    echo "<tr>";
+    echo "<td>".$s['name']."</td>";
+    echo "<td>".$s['age']."</td>";
+    echo "<td>".$s['course']."</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+?>
+```
+
+---
+
+### Output
+
+```
+Name   Age   Course
+Ali    20    BTech
+Sara   21    BSc
+John   22    BCA
+```
+
+---
+
+# 6️⃣ Include-Based Website Layout
+
+### Problem
+
+Create reusable header & footer using include and display page.
+
+---
+
+### header.php
+
+```php
+<h1>My College Portal</h1>
+<hr>
+```
+
+### footer.php
+
+```php
+<hr>
+<footer>© 2026 Portal</footer>
+```
+
+### index.php
+
+```php
+<?php include("header.php"); ?>
+
+<h3>Welcome to Student Portal</h3>
+<p>This is home page.</p>
+
+<?php include("footer.php"); ?>
+```
+
+---
+
+### Output
+
+```
+My College Portal
+----------------
+Welcome to Student Portal
+This is home page.
+----------------
+© 2026 Portal
+```
+
+---
+
+# 7️⃣ Number Analyzer (Control Structures)
+
+### Problem
+
+Input number → display
+
+* Even/Odd
+* Positive/Negative
+* Multiplication table
+
+---
+
+### Code
+
+```php
+<form method="post">
+Enter Number: <input name="num">
+<input type="submit">
+</form>
+
+<?php
+if(isset($_POST['num'])) {
+    $n = $_POST['num'];
+
+    echo "Number: $n <br>";
+
+    if($n%2==0) echo "Even<br>";
+    else echo "Odd<br>";
+
+    if($n>=0) echo "Positive<br>";
+    else echo "Negative<br>";
+
+    echo "<h4>Table</h4>";
+    for($i=1;$i<=10;$i++)
+        echo "$n x $i = ".($n*$i)."<br>";
+}
+?>
+```
+
+---
+
+### Input
+
+```
+5
+```
+
+### Output
+
+```
+Number: 5
+Odd
+Positive
+Table
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50
+```
+
+---
+
+# 🎯 These are typical 8–10 mark PHP exam questions
+
+If you practice these, you can answer:
+
+* Forms
+* Sessions
+* Files
+* JSON
+* Include
+* Control structures
+
+---
+
+If you want, I can give:
+✅ 10-mark expected questions list
+✅ Full mock mid exam paper
+✅ Important theory answers
+
+Just tell me 👍 -->
