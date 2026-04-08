@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Tasks</title>
+
+    <style>
+        #styleBox {
+            padding: 10px;
+            border: 1px solid black;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        #hoverText {
+            width: 250px; 
+            padding: 10px; 
+            border: 1px solid black;
+        }
+    </style>
+</head> 
+
+<body>
+    <h1 style ="text-align: center;">JAVASCRIPT FOR BEGINNERS</h1>
+
+    <!-- TASK 1 -->
+    <h2>Task-1: Define variables in JavaScript</h2>
+    <script>
+        let founder = "P.Mohammad Nabi-Founder";
+        const _company = "Company:Straw hats";
+        var started_year = "2025-Started Year";
+        console.log(founder, _company, started_year);
+    </script>
+
+    <!-- TASK 2 -->
+    <h2>Task-2: Create Basic Functions in JavaScript</h2>
+    <script>
+        let user_name = prompt("Enter your name:");
+
+        function greet(name){
+            console.log("Welcome to Straw hats company Mr/Mrs: " + name);
+        }
+        greet(user_name);
+
+        let choice = prompt("Do you want to order something? (yes/no)");
+
+        let myfunction = () => {
+            if (choice === null) {
+                console.log("You cancelled the prompt.");
+            } 
+            else if (choice.toLowerCase() === "yes") {
+                console.log("Great! Redirecting you to the order page...");
+            } 
+            else if (choice.toLowerCase() === "no") {
+                console.log("No problem! Feel free to explore our website.");
+            } 
+            else {
+                console.log("Invalid input. Please enter 'yes' or 'no'.");
+            }
+        };
+
+        myfunction();
+
+        const add = (a,b) => a+b;
+        const sub = (a,b) => a-b;
+
+        function maths(){
+            console.log("ADD:", add(5,3));
+            console.log("SUBTRACTION:", sub(100,10));
+        }
+        maths();
+    </script>
+
+    <!-- TASK 3 -->
+    <h2>Task-3: Built-in Functions</h2>
+    <button onclick="alert('Please wait...')">Contact Officials</button>
+
+    <script>
+        let problem = prompt("Can you please enter your problem?"); 
+        let fun = () =>
+        {
+            if(problem === ""){
+                console.log("Hope you Enjoyed our service")
+            }
+            else{
+                console.log("we will see through your problem")
+            }
+        }
+        fun();
+        alert("Your problem has been recorded: " + problem);
+    </script>
+
+    <!-- TASK 4 -->
+    <h2>Task-4: Manipulate HTML Content</h2>
+    <p id="paraText">Your order has been Recorded.</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="addContent()">Add Content</button>
+    <button onclick="removeContent()">Remove Content</button>
+
+    <div id="extraContent"></div>
+
+    <script>
+        function changeText() {
+            document.getElementById("paraText").innerText = 
+               "We will see through your order and contact you as soon as possible";
+        }
+        function addContent() {
+            document.getElementById("extraContent").innerHTML =
+                "<p>Do you want to order something to eat?</p>";
+        }
+        function removeContent() {
+            document.getElementById("extraContent").innerHTML = "";
+        }
+    </script>
+
+    <!-- TASK 5 -->
+    <h2>Task-5: Styling</h2>
+    <h3>Do you want to change the background of box click on Apply style</h3>
+    <h3>Or if you want to Toggle styles of box click on toggle style</h3>
+    <div id="styleBox">This box will change style.</div>
+
+    <button onclick="applyStyle()">Apply Style</button>
+    <button onclick="toggleStyle()">Toggle Style</button>
+
+    <script>
+        function applyStyle() {
+            const box = document.getElementById("styleBox");
+            box.style.color = "white";
+            box.style.background = "black";
+            box.style.fontSize = "20px";
+        }
+
+        let toggled = false;
+        function toggleStyle() {
+            const box = document.getElementById("styleBox");
+            if (!toggled) {
+                box.style.background = "lightblue";
+                box.style.color = "darkblue";
+            } else {
+                box.style.background = "red";
+                box.style.color = "black";
+            }
+            toggled = !toggled;
+        }
+    </script>
+
+
+    <!-- TASK 6 -->
+    <h2>Task 6: Work with Events and Functions</h2>
+
+    <button onclick="task6Function()">Click Me (To make us know your presence)</button>
+
+    <p id="hoverText">
+        Hover over this text to see style changes
+    </p>
+
+    <form id="submitForm">
+        <input type="text" placeholder="Type something..." required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function task6Function() {
+            console.log("Button clicked! (customer)");
+        }
+
+        const hoverBox = document.getElementById("hoverText");
+
+        hoverBox.addEventListener("mouseover", function () {
+            hoverBox.style.background = "yellow";
+            hoverBox.style.color = "blue";
+        });
+
+        hoverBox.addEventListener("mouseout", function () {
+            hoverBox.style.background = "white";
+            hoverBox.style.color = "black";
+        });
+
+        document.getElementById("submitForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            console.log("Form submitted successfully!");
+            alert("Form submitted!");
+        });
+    </script>
+
+
+    <!-- TASK 7 -->
+    <h2>Task 7: Create Interactive Webpages</h2>
+
+    <script>
+        let username = prompt("Enter your name for personalized greeting:");
+        if (username) {
+            document.write("<h3>Hello " + username + ", welcome to our website!</h3>");
+        }
+    </script>
+
+    <h3>Simple Form Validation</h3>
+    <form id="validationForm">
+        <label>Name:</label>
+        <input type="text" id="nameField" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" id="emailField" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("validationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("nameField").value;
+            let email = document.getElementById("emailField").value;
+
+            if (name === "" || email === "") {
+                alert("All fields are required!");
+            } else {
+                alert("Form submitted successfully!");
+                console.log("Validated Data:", name, email);
+            }
+        });
+    </script>
+
+    <br>
+    <button onclick="window.print()">Print this page</button>
+
+</body>
+</html>

@@ -1,5 +1,8 @@
 {
     "require": {
-        "mongodb/mongodb": "^1.16"
+        "mongodb/mongodb": "^1.16",
+        "google/auth": "^1.30",
+        "guzzlehttp/guzzle": "^7.8",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

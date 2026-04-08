@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>NABITECHNICAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-        body{
-            background-image :url(/PICTURES/img5.jpg);
+        body {
+            background-image: url(/PICTURES/img5.jpg);
             background-clip: border-box;
             background-size: cover;
-            color :white;
+            color:white;
             font-family: Arial, Helvetica, sans-serif;
-            font-size:large;
+            font-size: large;
         }
+
         header {
             display: flex;
-            justify-content:space-between;
-            align-items: center; 
+            justify-content: space-between;
+            align-items: center;
             padding: 10px 20px;
         }
 
@@ -22,6 +26,7 @@
             color: white;
             margin: 0;
         }
+
         nav a {
             color: cyan;
             margin: 0 10px;
@@ -31,112 +36,138 @@
         nav a:hover {
             color: white;
         }
-        .intro{
+
+        .intro {
             display: flex;
             flex-direction: column;
             margin-top: 50px;
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             text-align: center;
-            width:100%;
-            height:250px;
+            width: 100%;
+            height: 250px;
         }
-        .intro marquee{
+
+        .intro marquee {
             display: flex;
             margin: auto;
             margin-top: 10px;
         }
-        .intro1{
+
+        .intro1 {
             display: flex;
             flex-direction: column;
             margin: auto;
             margin-bottom: 80px;
-            font-family:'Times New Roman', Times, serif; 
+            font-family: 'Times New Roman', Times, serif;
             text-align: center;
         }
-        footer{
-            text-align:center;
+
+        footer {
+            text-align: center;
             background-color: black;
             padding: 15px 0px;
             border-radius: 30px;
-            box-shadow:2px 2px 10px white ;
+            box-shadow: 2px 2px 10px white;
         }
-        .foot{
+
+        .foot {
             display: flex;
             flex-direction: column;
         }
-        #forms{
+
+        #forms {
             padding: 10px 20px;
             display: flex;
             justify-content: center;
         }
-        #forms input{
+
+        #forms input {
             border-radius: 5px;
             width: 100%;
             padding: 5px;
             margin-bottom: 30px;
             margin-top: 5px;
         }
+
         form {
-            background-color:black;
+            background-color: black;
             color: white;
             margin-top: 50px;
             margin-bottom: 50px;
             padding: 30px 20px;
             border-radius: 15px;
-            width:400px;
+            width: 400px;
             box-shadow: 5px 5px 10px white;
-            }
-        label{
+        }
+
+        label {
             text-decoration: solid;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
         }
-        .matter td{
-            padding:10px 10px;
+
+        .matter td {
+            padding: 10px 10px;
         }
-        .matter img{
+
+        .matter img {
             border-radius: 8px;
         }
-        .matter p{
+
+        .matter p {
             font-family: 'Times New Roman', Times, serif;
             line-height: 1.5;
             white-space: pre-wrap;
             word-wrap: break-word;
-            font-size:18px;
+            font-size: 18px;
         }
-        .navigation{
-            display:flex;
+
+        .navigation {
+            display: flex;
             justify-content: flex-start;
-            gap:40px;
+            gap: 40px;
             background-color: silver;
             overflow-x: auto;
             scrollbar-width: none;
 
         }
-        .navigation a{
-            color:black;
+
+        .navigation a {
+            color: black;
         }
-        #ABOUTUS{
+
+        #ABOUTUS {
             display: flex;
             /* flex:1; */
-            gap:20px;
+            gap: 20px;
             line-height: 1.5;
         }
-        #ABOUTUS pre{
+
+        #ABOUTUS pre {
             margin-top: 40px;
             font-family: 'Times New Roman', Times, serif;
         }
-        #ABOUTUS img{
+
+        #ABOUTUS img {
             border-radius: 5px;
         }
-        #ABOUTUS img:hover{
-            animation:fade 2s ;  /*steps(6)*/
+
+        #ABOUTUS img:hover {
+            animation: fade 2s;
+            /*steps(6)*/
         }
-        @keyframes fade{
-            from{opacity:0;}
-            to{opacity: 1;}
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-       /*#CONTACTUS{
+
+        /*#CONTACTUS{
         display: grid;
         grid-template-columns: 1fr 1fr; 
         gap: 20px;
@@ -145,14 +176,16 @@
         grid-column: 2;        
         grid-row: 1 / span 2;  
         } */
-        #CONTACTUS{
-            display:flex;
-            gap:100px;
-            flex:1;
+        #CONTACTUS {
+            display: flex;
+            gap: 100px;
+            flex: 1;
         }
-        .con h2{
-            margin-top:150px;
+
+        .con h2 {
+            margin-top: 150px;
         }
+
         .information {
             background-color: black;
             border-left: 5px solid orangered;
@@ -160,17 +193,18 @@
             border-radius: 10px;
             margin: 30px;
             box-shadow: -5px 5px 10px white;
-            line-height: 1.8;  
+            line-height: 1.8;
         }
 
         .information pre {
-            margin: 30px;                      /* remove default spacing */
-            font-family:'Times New Roman', Times, serif;             /* inherit modern font instead of monospace */
-            color: white;   
+            margin: 30px;
+            /* remove default spacing */
+            font-family: 'Times New Roman', Times, serif;
+            /* inherit modern font instead of monospace */
+            color: white;
             word-wrap: break-word;
-            white-space: pre-wrap;            
+            white-space: pre-wrap;
         }
-
     </style>
 </head>
 
@@ -188,64 +222,78 @@
         </nav>
     </header>
     <div class="navigation">
-            <a href="#HOME">HOME</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html">HTML</a>
-            <a href="/TASKS/TASK2/FRAMES.html" target="_blank">FRAMES</a>
-            <a href="/TASKS/TASK2/task2.html" target="_blank">TABLE</a>
-            <a href="/TASKS/TASK2/FORMS.html" target="_blank">FORMS</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">PYTHON</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">RUBY</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">C</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">C++</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">JAVASCRIPT</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">ANGULAR</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
-            <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
+        <a href="#HOME">HOME</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html">HTML</a>
+        <a href="/TASKS/TASK2/FRAMES.html" target="_blank">FRAMES</a>
+        <a href="/TASKS/TASK2/task2.html" target="_blank">TABLE</a>
+        <a href="/TASKS/TASK2/FORMS.html" target="_blank">FORMS</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">PYTHON</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">RUBY</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">C</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">C++</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">JAVASCRIPT</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">ANGULAR</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">MEAN</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">NODEjs</a>
+        <a href="/WEB_DESIGN_TRAIL1/index.html" target="_blank">REACT</a>
     </div>
     <div class="intro" id="HOME">
-    <h2>Welcome to NABITECHNICAL</h2>
-    <p>ABOUT ME</p>
-    <marquee WIDTH="50%" scrollamount="8">A WEBSITE FOR WEB DEVELOPERS</marquee>
+        <h2>Welcome to NABITECHNICAL</h2>
+        <p>ABOUT ME</p>
+        <marquee WIDTH="50%" scrollamount="8">A WEBSITE FOR WEB DEVELOPERS</marquee>
     </div>
-    <div class="intro1"  id="SERVICES">
-    <h2 style="text-align:center">WHAT DO WE OFFER</h2>
-    <pre>
+    <div class="intro1" id="SERVICES">
+        <h2 style="text-align:center">WHAT DO WE OFFER</h2>
+        <pre>
         1.HTML      2.CSS       3.JQUERY        4.SCSS      5.JAVASCRIPT        6.PHP       7.ANGULAR4/5/6
     </pre>
     </div>
     <div class="matter">
-    <table>
-    <tr>
-    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4riWxpWiRkulxTpR4IGqRHrrC2MwCKLbB8A&s" alt="Looks Like browser does not supprt" height="150" width="200"></td>
-    <td>
-        <p style="text-align:justify">
-                Web development is the process of creating and maintaining websites and web applications that are accessible through the internet. It involves designing how a website looks, how it behaves when users interact with it, and how it communicates with servers. Web development ensures that websites are responsive, user-friendly, and compatible across different devices and browsers, making information and services easily accessible to users worldwide.
-        </p>
-    </td>
-    </tr>
-     <tr>
-        <td><img src="/PICTURES/img1.jpg" width="200" height="150"></td>
-        <td>
-            <p style="text-align:justify">
-                Web development is broadly divided into front-end and back-end development. Front-end development focuses on the visual and interactive parts of a website using technologies like HTML, CSS, and JavaScript. It deals with layout, colors, fonts, and user experience. Back-end development handles the server-side logic, databases, and application functionality using languages such as Python, Java, PHP, or Node.js. Together, both parts work seamlessly to deliver dynamic and functional web applications.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td><img src="/PICTURES/img2.jpg" width="200" height="150"></td>
-        <td>
-            <p style="text-align:justify">
-                 In today’s digital world, web development plays a vital role in businesses, education, and communication. Modern web developers also focus on performance optimization, security, and scalability to ensure fast and safe user experiences. With the growth of technologies like cloud computing, APIs, and frameworks, web development continues to evolve, offering vast career opportunities and enabling innovative solutions on the web.
-            </p>
-        </td>
-    </tr>
-    </table>
-</div>
-     <div class="information">
+        <table>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4riWxpWiRkulxTpR4IGqRHrrC2MwCKLbB8A&s"
+                        alt="Looks Like browser does not supprt" height="150" width="200"></td>
+                <td>
+                    <p style="text-align:justify">
+                        Web development is the process of creating and maintaining websites and web applications that
+                        are accessible through the internet. It involves designing how a website looks, how it behaves
+                        when users interact with it, and how it communicates with servers. Web development ensures that
+                        websites are responsive, user-friendly, and compatible across different devices and browsers,
+                        making information and services easily accessible to users worldwide.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="/PICTURES/img1.jpg" width="200" height="150"></td>
+                <td>
+                    <p style="text-align:justify">
+                        Web development is broadly divided into front-end and back-end development. Front-end
+                        development focuses on the visual and interactive parts of a website using technologies like
+                        HTML, CSS, and JavaScript. It deals with layout, colors, fonts, and user experience. Back-end
+                        development handles the server-side logic, databases, and application functionality using
+                        languages such as Python, Java, PHP, or Node.js. Together, both parts work seamlessly to deliver
+                        dynamic and functional web applications.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="/PICTURES/img2.jpg" width="200" height="150"></td>
+                <td>
+                    <p style="text-align:justify">
+                        In today’s digital world, web development plays a vital role in businesses, education, and
+                        communication. Modern web developers also focus on performance optimization, security, and
+                        scalability to ensure fast and safe user experiences. With the growth of technologies like cloud
+                        computing, APIs, and frameworks, web development continues to evolve, offering vast career
+                        opportunities and enabling innovative solutions on the web.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="information">
         <pre>
 HTML (HyperText Markup Language) is the foundational language of web development and is used to create the structure of web pages.
 It defines elements such as headings, paragraphs, images, links, forms, tables, and multimedia content. HTML5 introduced semantic
@@ -275,9 +323,10 @@ with frameworks such as Spring and Hibernate to develop secure and high-performa
 multithreading, and security features, making it suitable for complex and mission-critical web applications.
 </pre>
     </div>
-<div id="ABOUTUS">
-    <div><img src="/PICTURES/1748617268040.jpg" height="300" width="100%" alt="MY PHOTO"></div>
-    <div><pre>
+    <div id="ABOUTUS">
+        <div><img src="/PICTURES/1748617268040.jpg" height="300" width="100%" alt="MY PHOTO"></div>
+        <div>
+            <pre>
 •Absolutely! Here’ “About Myself”:
 •Name:   Mohammad Nabi
 •Age:   19 years old
@@ -286,41 +335,54 @@ multithreading, and security features, making it suitable for complex and missio
 •Interests:   Web development, learning new technologies
 •Achievements/Activities:   Successfully completed the National Cadet Corps (NCC) program
 •Personal Traits:   Enthusiastic about developing skills and growing both personally and professionally
-            </pre></div>
-</div>
-<div id="CONTACTUS">
-<div class="con">
-<h2 style="font-family:'Times New Roman', Times, serif; text-decoration: underline;">Feel Free To Contact</h2>
-<p style="font-family: 'Times New Roman', Times, serif; font-weight: 400; padding:10px 0px;">
-Hello Everyone! Have a great day :) I am here to help you.<br>
-If you want to know something or you have any suggestion then please mail me.<br>
-Thank You.<br>
-<img src="/PICTURES/instagram.png" style="width:30px; height:20px;"><a href="https://www.instagram.com/mohammadnabi943?igsh=MXY2cnFoODFiazZl">&nbsp;&nbsp;@MOHAMMADNABI943</a><br>
-<img src="/PICTURES/facebook.png" style="width:30px; height:20px;"><a href="https://www.facebook.com/share/1EdYkFDrfy/">&nbsp;&nbsp;MOHAMMAD NABI</a>
-</p>
-</div>
+            </pre>
+        </div>
+    </div>
+    <div id="CONTACTUS">
+        <div class="con">
+            <h2 style="font-family:'Times New Roman', Times, serif; text-decoration: underline;">Feel Free To Contact
+            </h2>
+            <p style="font-family: 'Times New Roman', Times, serif; font-weight: 400; padding:10px 0px;">
+                Hello Everyone! Have a great day :) I am here to help you.<br>
+                If you want to know something or you have any suggestion then please mail me.<br>
+                Thank You.<br>
+                <img src="/PICTURES/instagram.png" style="width:30px; height:20px;"><a
+                    href="https://www.instagram.com/mohammadnabi943?igsh=MXY2cnFoODFiazZl">&nbsp;&nbsp;@MOHAMMADNABI943</a><br>
+                <img src="/PICTURES/facebook.png" style="width:30px; height:20px;"><a
+                    href="https://www.facebook.com/share/1EdYkFDrfy/">&nbsp;&nbsp;MOHAMMAD NABI</a>
+            </p>
+        </div>
         <div id="forms">
-        <form>
-        <div >
-        <label>NAME:</label>
-        <input type="text" placeholder="ENTER YOUR NAME"></div>
-        <div >
-        <label>EMAIL:</label>
-        <input type="email" placeholder="Enter email"></div>
-        <div >
-        <label>MESSAGE:</label>
-        <input type="textarea" placeholder="Enter MSG"></div>
-        <div >
-        <input type="submit" value="SUBMIT" style="width:100%; background-color:white; border-radius: 10px; color:black; "></div>
+            <form>
+                <div>
+                    <label>NAME:</label>
+                    <input type="text" placeholder="ENTER YOUR NAME">
+                </div>
+                <div>
+                    <label>EMAIL:</label>
+                    <input type="email" placeholder="Enter email">
+                </div>
+                <div>
+                    <label>MESSAGE:</label>
+                    <input type="textarea" placeholder="Enter MSG">
+                </div>
+                <div>
+                    <input type="submit" value="SUBMIT"
+                        style="width:100%; background-color:white; border-radius: 10px; color:black; ">
+                </div>
         </div>
         </form>
-        </div>
-</div>
-<div class="foot">
-<footer>
-<p>&copy 2025 | ALL RIGHTS ARE RESERVED</p>
-</footer>
-</div>
-<script src="/TASKS/TASK3/script.js"></script>
+    </div>
+    </div>
+    <div class="foot">
+        <footer>
+            <p>&copy 2025 | ALL RIGHTS ARE RESERVED</p>
+        </footer>
+    </div>
+    <script src="/TASKS/TASK3/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

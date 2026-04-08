@@ -1,16 +1,23 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+
+require __DIR__ . '/../../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+use Google\Auth\OAuth2;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
 
 session_start();
 
-$client = new Google\Client();
-$client->setClientId($_ENV[""]);
-$client->setClientSecret($_ENV[""]);
-$client->setRedirectUri($_ENV[""]);
+$oauth2 = new OAuth2([
+    'clientId'           => $_ENV["GOOGLE_CLIENT_ID"],
+    'clientSecret'       => $_ENV["GOOGLE_CLIENT_SECRET"],
+    'authorizationUri'   => 'https://accounts.google.com/o/oauth2/auth',
+    'tokenCredentialUri' => 'https://oauth2.googleapis.com/token',
+    'redirectUri'        => $_ENV["GOOGLE_REDIRECT_URI"],
+    'scope'              => ['email', 'profile'],
+]);
 
-$client->addScope("email");
-$client->addScope("profile");
-
-header("Location: " . $client->createAuthUrl());
+header("Location: " . $oauth2->buildFullAuthorizationUri());
 exit;
-?>
